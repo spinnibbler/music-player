@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="audiojs/audio.min.js"></script>
+    <script>
+        audiojs.events.ready(function () {
+            var as = audiojs.createAll();
+        });
+    </script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            font-weight: 300;
+        }
+        h2 {
+            font-weight: 400;
+        }
+
+        .background {
+            background-image: url("images/album2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+        }
+
+        .background2 {
+            background-color: rgba(0, 0, 0, 0.71);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .content {
+            margin: 0 auto;
+            width: 400px;
+            margin-top: 10%;
+        }
+
+        .playerbox {
+
+        }
+
+        .albumimage {
+            width: 400px;
+            height: 400px;
+            background-image: url("images/album2.jpg");
+            background-size: contain;
+            z-index: -1;
+            box-shadow: 0px 0px 52px -5px rgba(0,0,0,0.75);
+        }
+
+        .songinfo {
+            margin-top: 40px;
+        }
+
+        .audiojs {
+            background: rgba(0, 0, 0, 0.61);
+            font-family: 'Roboto', sans-serif;
+            width: auto;
+            height: auto;
+            box-shadow: none;
+            margin-top: -15px;
+            overflow: visible;
+        }
+
+        .audiojs .loaded {
+            background: #474747;
+            background-image: none;
+        }
+
+        .audiojs .progress {
+            background: white;
+        }
+
+        .audiojs .scrubber {
+            height: 1px;
+            margin: 0px;
+            margin-top: 15px;
+            position: absolute;
+            width: 400px;
+        }
+
+        .audiojs .time {
+            display: none;
+        }
+
+        .audiojs .play-pause {
+            border-right: none;
+            padding: 4px 0px 4px 0px;
+            z-index: 10;
+            margin-top: -230px;
+            margin-left: 165px;
+            width: 72px;
+            height: 72px;
+        }
+
+        .audiojs .play {
+            background: url("images/ic_play_circle_filled_white_36dp_2x.png");
+            background-repeat: no-repeat;
+        }
+
+        .audiojs .pause {
+            background: url("images/ic_pause_circle_filled_white_36dp_2x.png");
+            background-repeat: no-repeat;
+        }
+
+        .audiojs .loading {
+            background: url("images/ic_album_white_36dp_2x.png");
+            background-repeat: no-repeat;
+        }
+
+        .audiojs .error {
+            background: url("images/ic_error_white_36dp_2x.png");
+            background-repeat: no-repeat;
+        }
+
+        .audiojs p {
+            width: 72px;
+            height: 100px;
+
+        }
+        .audiojs .error-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="background"></div>
+<div class="background2"></div>
+<div class="content">
+    <div class="playerbox">
+        <div class="albumimage"></div>
+        <audio src="music/Pray_to_God.mp3"/>
+    </div>
+    <div class="songinfo"><h1>Pray to God</h1>
+        <h2>Calvin Harris feat. HAIM</h2></div>
+</div>
+</body>
+</html>
